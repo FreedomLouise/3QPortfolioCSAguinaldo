@@ -6,5 +6,29 @@
 }
 
 h1 {
+    font-family:'Franklin Gothic Medium'
+    ;
+}
+
+body {
+    margin: 0px;
+    font-size: 18px;
     font-family:'Franklin Gothic Medium';
+    background-color: #FFE6EA;
+    z-index: 0
+}
+
+.menu {
+    top:0px;
+    height: 10%;
+    width: 100%;
+    position: fixed;
+    background-image: #FCF0F2;
+    border: #FCF0F2;
+    text-align: left;
+    padding-top: 50px;
+    padding-left: 50px;
+    padding-right:  50px;
+    filter: drop-shadow(0px 0px 1px white) drop-shadow(1px 1px 0px #0000004d);
+    z-index: 15;
 }
