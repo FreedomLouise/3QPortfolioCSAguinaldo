@@ -1,88 +1,94 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
- <meta charset="UTF-8" />
- <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
- <title>Freedom's Work</title>
- <link rel="icon" type="image/png" href="https://i.pinimg.com/736x/e2/3f/f2/e23ff23003a9013e63b994b27ecae302.jpg" />
- <link rel="stylesheet" href="./meowmeow.css">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Freedom's Work</title>
+  <link rel="icon" type="image/png"
+        href="https://i.pinimg.com/736x/e2/3f/f2/e23ff23003a9013e63b994b27ecae302.jpg" />
+  <link rel="stylesheet" href="./meowmeow.css">
 </head>
- <body>
-    <header>
-       <div>
-           <img src="https://ph.pinterest.com/pin/233976143135768649/" alt="logo"
-              title="The Official Logo" width="50px" height="50px" />
-           <h1>
-               Club Application:   
-           </h1>
-           <h3>by Freedom Louise Aguinaldo </h3>
-       </div>
-       <nav class="menubar">
-           <a href="../index.html"> Home </a>
-           <a href="register.html"> Show Saved Accounts </a>
-       </nav>
-   </header>
-   <section>
-     <h1 class="title">Sign-ups</h1>
-     <form id="dForm" action="register.html" method="get">
-       <fieldset>
-         <legend>Please Credit Credentials</legend><br/>
 
+<body>
+<header>
+  <div>
+    <img src="https://ph.pinterest.com/pin/233976143135768649/"
+         alt="logo" width="50" height="50"/>
+    <h1>Club Application:</h1>
+    <h3>by Freedom Louise Aguinaldo</h3>
+  </div>
 
-         <label> Full name:
-           <input type="text" name="name" id="uname" required />
-         </label><br/><br/>
-         <label> Birthday:
-           <input type="text" name="bday" id="uname" required />
-         </label><br/><br/>
-         <label> Email Address:
-           <input type="text" name="email" id="uname" required />
-         </label><br/><br/>
-         <label> Mobile Number:
-           <input type="text" name="num" id="uname" required />
-         </label><br/><br/>
-         <label for="grade">Grade Level:
-           <select name="grade" id="grade">
-              <option value="choose">choose</option>
-              <option value="grade 7">Grade 7</option>
-              <option value="grade 8">Grade 8</option>
-              <option value="grade 9">Grade 9</option>
-              <option value="grade 10">Grade 10</option>
-              <option value="grade 11">Grade 11</option>
-              <option value="grade 12">Grade 12</option>
-           </select>
-           </label><br/><br/>
-         <label> Intern or Extern:
-           <input type="radio" name="idkwhattheycalled" value="Intern" /> Intern
-           <input type="radio" name="idkwhattheycalled" value="Extern" /> Extern
-         </label><br/><br/>
-         <label for="club"> Preferred Club/Organization:
-           <select name="club" id="club">
-              <option value="choose">choose</option>
-              <option value="care">CARE</option>
-              <option value="atom">ATOM</option>
-              <option value="sapienara">Sapienara</option>
-              <option value="munwha">Munwha</option>
-              <option value="kamalayan">Kamalayan</option>
-           </select>
-           </label><br/><br/>
-           <label> Why do you want to join:
-           <textarea name="about" id="about">
-            
-           </textarea>
-         </label><br/><br/>
-        
-        
-        
-       </fieldset> 
-       <fieldset>
-         <legend>Submit</legend>
-         <button type="submit"> Submit </button>
-         <input type="reset" value=" Clear " />
-       </fieldset>
-     </form>
-   </section>
-   <script src="hehueh.js"></script>
- </body>
+  <nav class="menubar">
+    <a href="../index.html">Home</a>
+    <a href="register.html">Show Saved Accounts</a>
+  </nav>
+</header>
+
+<section>
+  <h1 class="title">Sign-ups</h1>
+
+  <form id="dForm" action="register.html" method="get">
+    <fieldset>
+      <legend>Please Credit Credentials</legend>
+
+      <label>Full name:
+        <input type="text" name="uname" required>
+      </label><br><br>
+
+      <label>Birthday:
+        <input type="text" name="bday" required>
+      </label><br><br>
+
+      <label>Email Address:
+        <input type="text" name="email" required>
+      </label><br><br>
+
+      <label>Mobile Number:
+        <input type="text" name="num" required>
+      </label><br><br>
+
+      <label>Grade Level:
+        <select name="grade" required>
+          <option value="">choose</option>
+          <option>Grade 7</option>
+          <option>Grade 8</option>
+          <option>Grade 9</option>
+          <option>Grade 10</option>
+          <option>Grade 11</option>
+          <option>Grade 12</option>
+        </select>
+      </label><br><br>
+
+      <label>Intern or Extern:
+        <input type="radio" name="idkwhattheycalled" value="Intern" required> Intern
+        <input type="radio" name="idkwhattheycalled" value="Extern"> Extern
+      </label><br><br>
+
+      <label>Preferred Club:
+        <select name="club" required>
+          <option value="">choose</option>
+          <option value="CARE">CARE</option>
+          <option value="ATOM">ATOM</option>
+          <option value="Sapienara">Sapienara</option>
+          <option value="Munwha">Munwha</option>
+          <option value="Kamalayan">Kamalayan</option>
+        </select>
+      </label><br><br>
+
+      <label>Why do you want to join:
+        <textarea name="about"></textarea>
+      </label>
+    </fieldset>
+
+    <fieldset>
+      <legend>Submit</legend>
+      <button type="submit">Submit</button>
+      <input type="reset" value="Clear">
+    </fieldset>
+  </form>
+</section>
+
+<script src="hehueh.js"></script>
+</body>
 </html>
 

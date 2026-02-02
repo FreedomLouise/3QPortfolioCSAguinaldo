@@ -1,52 +1,85 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
- <meta charset="UTF-8" />
- <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
- <title>Freedom's Work</title>
- <link rel="icon" type="image/png" href="https://i.pinimg.com/736x/e2/3f/f2/e23ff23003a9013e63b994b27ecae302.jpg" />
- <link rel="stylesheet" href="./meowmeow.css">
- </head>
- <body>
-    <header>
-       <div>
-           <img src="https://ph.pinterest.com/pin/233976143135768649/" alt="logo"
-              title="The Official Logo" width="50px" height="50px" />
-       </div>
-       <nav class="navbar">
-           <a href="../index.html"> Home </a>
-           <a href="Q3graded1.html"> Create Account </a>
-       </nav>
-   </header>
-   <section>
-     <h1 class="title">Account Saved In Your Computer</h1>
-     <table id="results"> </table>
-    
-   </section>
-   <script>
-       // read from the localStorage saved as a string - to see if there are anything saved on the users coomputer
-       let acctString = localStorage.getItem("accounts")
-       if (!acctString) { accountList = "No Accounts Found" } // initialize the variable to contain the list of accounts object
-       else {
-          
-           accountList = JSON.parse(acctString) // converts string into the correct data type in this case object   
-           rowString = "<tr><th>Username</th><th>DOB</th><th>Gender</th><th>DP Check</th><th>About</th></tr>";
-           // results.innerHTML = ""  // resets the table
-           console.log(accountList)
-           for (let key in accountList) {
-               rowString += "<tr>";
-               rowString += "<td>" + key + "</td>";
-               rowString += "<td>" + accountList[key].email + "</td>";
-               rowString += "<td>" + accountList[key].num + "</td>";
-               rowString += "<td>" + accountList[key].grade + "</td>";
-               rowString += "<td>" + accountList[key].idkwhattheycalled + "</td>;
-               rowString += "<td>" + accountList[key].club + "</td></tr>";
-           }
-       }
-       results.innerHTML = rowString;
+  <meta charset="UTF-8">
+  <title>Saved Accounts</title>
+  <link rel="stylesheet" href="./meowmeow.css">
+  <style>
+    table {
+      border-collapse: collapse;
+      width: 90%;
+      margin: 20px auto;
+      background-color: #fff;
+    }
+    th, td {
+      border: 1px solid #ccc;
+      padding: 10px;
+      text-align: left;
+    }
+    th {
+      background-color: #f1f1f1;
+    }
+    tbody tr:nth-child(even) {
+      background-color: #f9f9f9;
+    }
+    h1.title {
+      text-align: center;
+      margin-top: 20px;
+    }
+  </style>
+</head>
 
+<body>
+<header>
+  <nav class="navbar">
+    <a href="../index.html">Home</a>
+    <a href="Q3graded1.html">Create Account</a>
+  </nav>
+</header>
 
-   </script>
- </body>
+<section>
+  <h1 class="title">Account Saved In Your Computer</h1>
+
+  <table id="results" border="1">
+    <thead>
+      <tr>
+        <th>Club</th>
+        <th>ID</th>
+        <th>Full Name</th>
+        <th>Grade</th>
+        <th>Email</th>
+        <th>Mobile</th>
+        <th>Intern/Extern</th>
+      </tr>
+    </thead>
+    <tbody></tbody>
+  </table>
+</section>
+
+<script>
+  const resultsBody = document.querySelector("#results tbody");
+  const acctString = localStorage.getItem("accounts");
+
+  if (!acctString) {
+    resultsBody.innerHTML = `<tr><td colspan="7" style="text-align:center">No Accounts Found</td></tr>`;
+  } else {
+    const accountList = JSON.parse(acctString);
+
+    for (let id in accountList) {
+      const a = accountList[id];
+      resultsBody.innerHTML += `
+        <tr>
+          <td>${a.club}</td>
+          <td>${id}</td>
+          <td>${id}</td>
+          <td>${a.grade}</td>
+          <td>${a.email}</td>
+          <td>${a.num}</td>
+          <td>${a.idkwhattheycalled}</td>
+        </tr>
+      `;
+    }
+  }
+</script>
+</body>
 </html>
-
