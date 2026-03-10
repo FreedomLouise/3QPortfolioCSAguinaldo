@@ -3,6 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <title>Movie Rating</title>
+  <link rel="icon" type="image/png" href="../assets/1_2_.jpg" />
 
 <style>
 body{
@@ -17,7 +18,7 @@ body{
 
 form{
     background-color: white;
-    border:1px solid gray;
+    border:1px solid rgb(221, 221, 221);
     padding:30px;
     width:500px;
     border-radius: 15px;
@@ -48,7 +49,7 @@ button{
 }
 
 .movieBox{
-    border:1px solid black;
+    border:1px solid rgb(221, 221, 221);
     padding:10px;
     margin: 10px auto; 
     width:500px;
@@ -61,14 +62,98 @@ button{
     color:gold;
 }
 
+.right-img {
+    position: absolute;
+    top: 15px;
+    right: 290px;
+    width: 500px;
+    height: 400px;
+}
+
+.haloish1-img {
+    position: absolute;
+    margin: auto;
+    top: 200px;
+    left: 693px;
+    width: 500px;
+    height: 500px;
+    z-index: -1;
+}
+
+.haloish2-img {
+    position: absolute;
+    margin: auto;
+    top: 101px;
+    left: 587px;
+    width: 700px;
+    height: 700px;
+    z-index: -2;
+}
+
+.haloish3-img {
+    position: absolute;
+    margin: auto;
+    top: 5px;
+    left: 485px;
+    width: 900px;
+    height: 900px;
+    z-index: -3;
+}
+
+.nasse3-img {
+    position: absolute;
+    top: 20px;
+    left: 270px;
+    width: 500px;
+    height: 450px;
+    z-index: -1;
+}
+
+.resoursebox {
+    width: 99%;
+    border: 1px, solid rgb(182, 221, 236);
+    padding: 10px;
+    background-color: rgb(194, 238, 255);
+    margin: 0 auto;
+}
+
+.ranfdomeow {
+    bottom: 1px;
+    right: 5px;
+    width: 30px;
+    height: 20px;
+    z-index: +1;
+}
+
+.ranfdomeow2 {
+    bottom: 1px;
+    right: 35px;
+    width: 30px;
+    height: 20px;
+    z-index: +1;
+}
+
+.ranfdomeow3 {
+    bottom: 1px;
+    right: 35px;
+    width: 30px;
+    height: 20px;
+    z-index: +1;
+}
+
+.p {
+    font-size: 10px;
+}
 </style>
 </head>
 
 <body>
 
 <div style="text-align: center;">
-    <img src="https://i.pinimg.com/originals/9c/9e/73/9c9e73c1109de2dbaa9c947fb2bdefad.gif" width="50%">
+    <img src="https://i.pinimg.com/originals/9c/9e/73/9c9e73c1109de2dbaa9c947fb2bdefad.gif" width="670px" height="370px">
 </div>
+
+<img src="../assets/nasse3.png" class="nasse3-img">
 
 <div style="text-align: center;">
     <h2>Add a Movie</h2>
@@ -107,7 +192,9 @@ button{
 </form>
 
 <div style="text-align: center;">
+    <br/>
     <h2>Movie List</h2>
+    <br/>
 </div>
 
 <div id="movieList"></div>
@@ -181,8 +268,27 @@ displayMovies();
 
 <br/>
 
-<h4>Resources:</h4>
-<p>Pinterest. (n.d). W3 GIF - W3 - Discover & Share GIFs. https://ph.pinterest.com/pin/67483694410430993/</p>
+<img src="../assets/nasse.png" class="right-img">
+
+<img src="../assets/haloish.png" class="haloish1-img">
+
+<img src="../assets/haloish2.png" class="haloish2-img">
+
+<img src="../assets/haloish3.png" class="haloish3-img">
+
+<img src="https://i.pinimg.com/736x/8b/5d/fd/8b5dfd33d9a793bad4d3baddbe3c90c1.jpg" class="ranfdomeow">
+
+<img src="https://i.pinimg.com/736x/4c/ae/29/4cae298871f5e0e5df57bfe12d9c3684.jpg" class="ranfdomeow2">
+
+<img src="" class="ranfdomeow3">
+
+<div class="resoursebox">
+    <h4>Resources:</h4>
+    <p class="p">Pinterest. (n.d). W3 GIF - W3 - Discover & Share GIFs. https://ph.pinterest.com/pin/67483694410430993/</p>
+    <p class="p">Pinterest. (n.d.). https://ph.pinterest.com/pin/5840674507686883/</p>
+    <p class="p">Kanae-sama. (n.d.). nasse. Pinterest. https://ph.pinterest.com/pin/585468020338512581/</p>
+    <p class="p">✿ʕ◕ᴥ◕ʔ✿. (n.d.). Neon Red Transparent Frame♥️. Pinterest. https://ph.pinterest.com/pin/47006389853328300/</p>
+</div>
 
 </body>
 </html>
