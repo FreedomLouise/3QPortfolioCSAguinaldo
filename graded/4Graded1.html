@@ -223,22 +223,54 @@ function addMovie(event){
     let year = document.getElementById("year").value;
     let genre = document.getElementById("genre").value;
 
-    let movie = {
-        title:title,
-        year:year,
-        genre:genre,
-        rating:String(rating)
-    };
-
     let movies = JSON.parse(localStorage.getItem("movies")) || [];
 
-    movies.push(movie);
+    let existingMovie = movies.find(movie => movie.title.toLowerCase() === title.toLowerCase());
+
+    if(existingMovie){
+
+        let oldRating = parseInt(existingMovie.rating);
+        let newRating = parseInt(rating);
+
+        let avgRating = Math.round((oldRating + newRating) / 2);
+
+        existingMovie.year = year;
+        existingMovie.genre = genre;
+        existingMovie.rating = avgRating;
+
+    } else {
+
+        let movie = {
+            title: title,
+            year: year,
+            genre: genre,
+            rating: rating
+        };
+
+        movies.push(movie);
+    }
 
     localStorage.setItem("movies", JSON.stringify(movies));
 
     displayMovies();
 
     document.querySelector("form").reset();
+}
+
+function deleteMovie(index){
+
+    let confirmDelete = confirm("Are you sure you want to delete this movie?");
+
+    if(confirmDelete){
+
+        let movies = JSON.parse(localStorage.getItem("movies")) || [];
+
+        movies.splice(index,1);
+
+        localStorage.setItem("movies", JSON.stringify(movies));
+
+        displayMovies();
+    }
 }
 
 function displayMovies(){
@@ -248,7 +280,7 @@ function displayMovies(){
 
     movieList.innerHTML = "";
 
-    movies.forEach(movie => {
+    movies.forEach((movie,index) => {
 
         let stars = "★".repeat(movie.rating);
 
@@ -256,6 +288,8 @@ function displayMovies(){
         <div class="movieBox">
         ${movie.title} (${movie.year}) - ${movie.genre}<br>
         Rating: <span class="movieStars">${stars}</span>
+        <br><br>
+        <button onclick="deleteMovie(${index})">Delete</button>
         </div>
         `;
     });
