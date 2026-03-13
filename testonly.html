@@ -31,49 +31,133 @@ body {
     padding: 10px;
     background-color: rgb(246, 214, 244);
     margin: 0 auto;
+    gap: 10px;
+}
+
+.resourceses {
+    width: 99%;
+    border: 1px, solid rgb(230, 185, 228);
+    padding: 10px;
+    background-color: rgb(246, 214, 244);
+    gap: 10px;
+}
+
+.para {
+    font-size: 10px;
+}
+
+.menu-bar {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    align-items: center;
+    border-radius: 5px;
+}
+
+.menu-bar a {
+  text-decoration: none;
+  color: black;
+  padding: 8px 15px;
+  background-color: #fff5f5;
+  border-radius: 5px;
+  transition: 0.2s;
+}
+
+.menu-bar a:hover {
+  background-color: #fffafa;
+}
+
+.dropdown {
+  position: relative;
+  display: inline-block;
+}
+
+.dropdown a.main {
+  background-color: #fff5f5;
+  color: black;
+  padding: 8px 12px;
+  text-decoration: none;
+  border-radius: 5px;
+}
+
+.dropdown-content {
+  display: none;
+  position: absolute;
+  background-color: #fff5f5;
+  min-width: 180px;
+  top: 100%;
+  left: 0;
+  border-radius: 5px;
+  flex-direction: column;
+  z-index: 1;
+}
+
+.dropdown-content a {
+  display: block;
+  padding: 10px;
+  color: black;
+  text-decoration: none;
+}
+
+.dropdown-content a:hover {
+  background-color: #fff1f1;
+}
+
+.other-works {
+    width: 35%;
+    right: 10px;
+    height:67px;
+    border: 1px, solid rgb(230, 185, 228);
+    padding: 10px;
+    background-color: rgb(246, 214, 244);
+    gap: 10px;
 }
 </style>
 <body>
     <div class="first-group">
         <img src="https://i.pinimg.com/1200x/97/8e/78/978e7830f575db73a3feba774f69392b.jpg" class="profile">
-        //music, search, dropdowns
-    </div>
 
-    <div class="menu-bar">
-        <a href="./index.html">Home</a>
-
+        <div class="menu-bar">
+            <a href="./testonly.html">Home</a>
+    
+            <div class="dropdown">
+                <a href="#">2nd Qtr ▾</a>
+                <div class="dropdown-content">
+                    <a href="/graded/Q21NGCesiumAguinaldo.html">PE 1</a>
+                    <a href="pe2.html">PE 2</a>
+                    <a href="/graded/Graded1.html">Graded 1</a>
+                    <a href="/graded/whoops.html">Graded 2</a>
+                    <a href="/graded/Graded3.html">Graded 3</a>
+            </div>
+        </div>
+    
         <div class="dropdown">
-            <a href="#">2nd Qtr ▾</a>
+            <a href="#">3rd Qtr ▾</a>
             <div class="dropdown-content">
-                <a href="/graded/Q21NGCesiumAguinaldo.html">PE 1</a>
-                <a href="pe2.html">PE 2</a>
-                <a href="/graded/Graded1.html">Graded 1</a>
-                <a href="/graded/whoops.html">Graded 2</a>
-                <a href="/graded/Graded3.html">Graded 3</a>
+                <a href="/graded/Q3graded1.html">Graded 1</a>
+                <a href="/graded/Q3graded1.html">Graded 2</a>
+                <a href="/graded/register.html">Graded 3</a>
+            </div>
+        </div>
+    
+        <div class="dropdown">
+            <a href="#">4th Qtr ▾</a>
+            <div class="dropdown-content">
+                <a href="graded/4Graded1.html">Graded 1</a>
+                <a href="graded/4Graded1.html">Graded 2</a>
+            </div>
         </div>
     </div>
-
-    <div class="dropdown">
-        <a href="#">3rd Qtr ▾</a>
-        <div class="dropdown-content">
-            <a href="/graded/Q3graded1.html">Graded 1</a>
-            <a href="/graded/Q3graded1.html">Graded 2</a>
-            <a href="/graded/register.html">Graded 3</a>
-        </div>
+<br>
+    <div class="other-works">
+        <h5>Other works!</h5>
+        <a href="link">Paper Hearts</a> <p>by Ababon, Avery and Aguinaldo</p>
     </div>
-
-    <div class="dropdown">
-        <a href="#">4th Qtr ▾</a>
-        <div class="dropdown-content">
-            <a href="graded/4Graded1.html">Graded 1</a>
-            <a href="graded/4Graded1.html">Graded 2</a>
-        </div>
-    </div>
-
+<br>
     <div class="resourceses">
         <h4>Resources:</h4>
-        <p>ANIME_LOVER. (n.d.). AKITO TAKAGI. Pinterest. https://ph.pinterest.com/pin/319544536075264297/</p>
-        <p>marilyn, B. (n.d.). Pinterest. https://ph.pinterest.com/pin/3025924746671984/</p>
-        <p></p>
+        <p class="para">ANIME_LOVER. (n.d.). AKITO TAKAGI. Pinterest. https://ph.pinterest.com/pin/319544536075264297/</p>
+        <p class="para">marilyn, B. (n.d.). Pinterest. https://ph.pinterest.com/pin/3025924746671984/</p>
+        <p class="para"></p>
     </div>
 </body>
