@@ -1,59 +1,143 @@
-# 02,03 Cesium ABABON, Avery and AGUINALDO, Freedom
-## CompSci Project Proposal 𐔌՞ ܸ.ˬ.ܸ՞𐦯
-<br>
+# Seatwork #2 - Getting to know CSS Position and z-index.
+### This seatwork will ask you to implement the different CSS position on a given code.
+### short link to this .md file is: https://bit.ly/4c61P9K
+#### Resources (also found in Khub week 5)
+- [4 Minute Youtube Video on CSS Position](https://www.youtube.com/watch?v=YEmdHbQBCSQ)
+- [CSS Position Tutorial](https://roycan.github.io/CssPositioningZIndexLab/)
 
-### Website title: Paper Hearts
-### Logo: ![Logo](/assets/logo.png)
-### Description: 
-The visual novel, (website game), was created by Avery Ababon and Freedom Louise Aguinaldo, fans of Death Note and Bleach. This game is a crossover of the two fandoms and there would be no superpowers here. It would be a typical school AU with romance. (Both anime belong to their respective authors. We’re just fans).
+### Instructions: 
+1. This is individual submission in khub, but you can work with a partner.  When you submit in khub please place both your names in the submission bin.
+2. Guided Activity (30 minutes), please follow what is being required.  
 
-The games begin when Light, Misa, and the player — three exchange students from Daikoku Private Academy — arrive at Karakura High School. The choice of which student to end up with depends on the player. Ichigo and Light, the main leads or other students that might be involved.
+    - Make a copy of this .md file to your Q4 repository and name it as **SectionLNseatwork2.md** example **9LiCruzSeatwork2.md**. Place it in your q4 repository vscode local computer. Committing frequently to your Github repository.  
+    - Copy the code below and paste it inside a new file (name it as SectionLNseatwork2.html). Place this file in the same location where the .md file is saved. 
+    - Change the content values of the meta tags to your names for author/s and the date today for revised.
+    - Please do the following tasks that will ask you to reposition HTML elements then answer the guided question for each task on the .md file. Commit changes to the .md file and to the .html file as well.
+    **- This seatwork is worth 20pts and should be submitted by the end of the period** The link to [KHub submission bin](https://khub.mc.pshs.edu.ph/mod/assign/view.php?id=15481).
+      - Submit the links to your .md file and .html file.
 
-### Outline:
-#### Page 1: Bleach
-Information about bleach 
-#### Page 2: Deathnote
-information about deathnote 
-#### Page 3: About the creators
-Tell about yourself
-Uhh hey guys! Happy Halloween! We are bleach/death note fans and our anime is so good, so go watch it!!! <br><br>
-Hi, it’s Avery ! Do you know about the anime Death Note? The story is really intense, even if it doesn’t have the typical fight scenes or romance in common anime. It has a cool and intense plot that really makes you think. Not only that, the character designs are also top-tier, making them look eye-catching, and their personalities are just as good as their looks because they’re smart both in EQ and IQ! The plot also makes you root for the bad guy, which is different from what you see in a majority of animes. <br><br>
-Hey guys! It's me, Freedom! Do you love the anime, Bleach? Me too! Its fight scenes will keep you entertained and keep you on your toes (no seriously it has many cliffhangers and put a filler in between). The characters look so pretty and hot and sometimes the anime will make you question yourself when this character dies or how their plot armor saves them after getting beaten up really badly. <br><br>
-#### Why you made this:
-We made this game to express our love for anime, specifically Bleach and Deathnote, and to also show our interest in games.
+```html
+<!DOCTYPE html>
+<html>
+<head>
+  <meta name="author" content="Freedom Louise Aguinaldo" />
+  <meta name="revised" content="27/3/2026" />
+  <style>
+    body { font-family: Arial, sans-serif; }
+    .header, .footer {
+      background: lightblue;
+      padding: 10px;
+    }
+    .footer {
+       opacity: 0.5;
+       position: fixed; 
+       bottom: 0; 
+       width: 100%;
+    }
+    .sidebar {
+      background: lightgreen;
+      width: 150px;
+      height: 200px;
+      position: relative;
+      top: 20px;
+      left: 20px;
+    }
+    .content {
+      background: lightyellow;
+      width: 300px;
+      height: 200px;
+      position: absolute; 
+      top: 66px; 
+      left: 200px;
+    }
+    .notice {
+    position: absolute;
+    top: 60px;
+    left: 400px;
+    background: orange;
+    padding: 10px;
+    z-index: 1;
+}
+  </style>
+</head>
+<body>
+  <div class="header">Header</div>
+  <div class="sidebar">Sidebar</div>
+  <div class="content">Main Content</div>
+  <div class="footer">Footer</div>
+  <div class="notice">Notice!</div>
+</body>
+</html>
+```
+### Step 1 (Static vs Relative):
 
-### Page 4: Character Page
-#### Bleach:
-1. Main:
-* Ichigo Kurosaki: Main lead<br>
-Ichigo Kurosaki is one of the main love interests of the player. He is a delinquent with a surprising high standing of grade. He’s chill with everyone unless they hurt him, his friends, or his family.<br><br>
-* Orihime Inoue: rival/friend <br>
-Orihime Inoue is one of the friends and rivals the player will encounter. She has a crush on Ichigo and inhales food. Even if she’s a bit (no she is) airheaded, she has good grades. <br><br>
-2. Side: 
-* Uryu Ishida: friend/possible lover<br>
-Uryu Ishida is one of the friends the player will encounter. He is smart and looks unapproachable due to his stern attitude. <br><br>
-* Sado “Chad” Yasutora: friend/possible lover<br>
-Sado Yasutora is one of the friends the player will encounter. He somehow always gets his pet bird to come with him and he is a gentle giant.<br><br>
-### Death Note:
-1. Main:
-* Light Yagami: Main lead <br>
-Light Yagami is the second main love interest who’s really smart and also manipulative. Everyone loves him because he looks attractive and has really good grades.<br><br>
-* Misa Amane: friend/rival<br>
-Misa Amane is a popular girl who is famous for her looks. She gets angry easily and gets protective over Light. She basically automatically hates whoever likes Light. Despite being a trouble maker, her grades are still somehow high.<br><br>
+- Add in css ```position: relative; top: 20px; left: 20px;``` to .sidebar.
 
-### Page 5: Visual novel / mechanics 
-Like a typical visual novel game, the player can choose dialogue options to move further into the story. Each choice can either move you closer to a love interest. There will be 4 main endings, but it will also have 2 secret endings.
+- Guided Question: What changed compared to the default static positioning? Try to give different values to top and left or you can change it to bottom, right.
 
-JS description: JS will be used in the visual novel’s transitions and code. It will also be used for some transitions in the website.
-### Navigation design:
+Answer: It changed its position from the original position.
 
-![page](/assets/1.png)
-![page](/assets/2.png)
-![page](/assets/3.png)
-![page](/assets/4.png)
-![page](/assets/5.png)
-![page](/assets/6.png)
-![page](/assets/7.png)
-![page](/assets/8.png)
-![page](/assets/9.png)
-![page](/assets/10.png)
+
+### Step 2 (Fixed):
+
+- Add in css ```position: fixed; bottom: 0; width: 100%;``` to .footer.
+
+- Guided Question: What happens when you scroll the page? Why does the footer behave differently from position relative?
+
+Answer: The footer stays in screen while scrolling down. The fixed position keeps the footer visible even when scrolling down.
+
+### Step 3 (Absolute):
+
+- Add in css ```position: absolute; top: 66px; left: 200px;``` to .content.
+
+- Guided Question: What is the effect of position: absolute on an element? How is it different from fixed?
+
+Answer: It removed the nromal flow and its's different from fixed because it is positioned to the its nearest positioned ancestor.
+
+
+### Step 4 : (Absolute)
+
+- Add in html ```<div class="notice">Notice!</div>``` and include the css below:
+
+```css
+.notice {
+    position: absolute;
+    top: 60px;
+    left: 400px;
+    background: orange;
+    padding: 10px;
+    z-index: 2;
+}
+```
+
+- Give .content a z-index: 1.
+
+- Guided Question: Why does the notice appear on top of the content? What happens if you swap the z‑index values?
+
+Answer: The notice appears on top of the content because of the z-index value. When the z-value is >= 0, it will go on top of the others while <= 0 goes under.
+
+- Challenge: 
+    * What changes that you have to do on the code that will position .notice box on the top right corner of the .content box? Please write the code on paper as well (both html and css on the part of .notice and .content).
+    * Try to change the position of .content to relative then to fixed. What do you observed each time?
+    * What do you observe on about the effect of z-index on .notice and .content boxes?
+
+3. Please answer the following reflection questions (15 minutes)
+
+    a. Could you summarize the differences between the CSS position values (static, relative, absolute, fixed)?
+
+    Answer: static:
+            relative:
+            absolute:
+            fixed: 
+
+    b. How does absolute positioning depend on its parent element?
+    
+    Answer:
+
+    c. How do you differentiate sticky from fixed (you can research on sticky)?
+
+    Answer:
+
+    d. If you were designing a webpage for a school event, how might you use positioning to highlight important information? Please give concrete examples.
+
+    Answer:
