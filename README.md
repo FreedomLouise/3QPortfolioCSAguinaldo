@@ -75,7 +75,7 @@
 
 - Guided Question: What changed compared to the default static positioning? Try to give different values to top and left or you can change it to bottom, right.
 
-Answer: It changed its position from the original position.
+Answer: It moved from its original position. It is still in its original space but uses top, bottom, left, right.
 
 
 ### Step 2 (Fixed):
@@ -84,7 +84,7 @@ Answer: It changed its position from the original position.
 
 - Guided Question: What happens when you scroll the page? Why does the footer behave differently from position relative?
 
-Answer: The footer stays in screen while scrolling down. The fixed position keeps the footer visible even when scrolling down.
+Answer: When scrolling down the page, the footer stays visible because the position is fixed, which means its still visible in place even if youre scrolling down.
 
 ### Step 3 (Absolute):
 
@@ -92,7 +92,7 @@ Answer: The footer stays in screen while scrolling down. The fixed position keep
 
 - Guided Question: What is the effect of position: absolute on an element? How is it different from fixed?
 
-Answer: It removed the nromal flow and its's different from fixed because it is positioned to the its nearest positioned ancestor.
+Answer: The absolute position removes the element from its normal flow in the page, so other elements in the page will act like it doesn't exist. It is also positioned to the nearest ancestor or if there's none, to the <body>. They are different from fixed position because fixed position stays visible even when scrolling while absolute position is relative to veiwport.
 
 
 ### Step 4 : (Absolute)
@@ -114,7 +114,7 @@ Answer: It removed the nromal flow and its's different from fixed because it is 
 
 - Guided Question: Why does the notice appear on top of the content? What happens if you swap the z‑index values?
 
-Answer: The notice appears on top of the content because of the z-index value. When the z-value is >= 0, it will go on top of the others while <= 0 goes under.
+Answer: The notice appears on top of the content because it has a higher z-index value. If their z-indexes are switched, the content will be on top of the notice. Z-index determines which one is on top or bottom. If you have a z-index above 0, it will be on top on an element, similar to notice and content's situation. But if you have a z-index below 0, it will be below an element.
 
 - Challenge: 
     * What changes that you have to do on the code that will position .notice box on the top right corner of the .content box? Please write the code on paper as well (both html and css on the part of .notice and .content).
@@ -125,19 +125,19 @@ Answer: The notice appears on top of the content because of the z-index value. W
 
     a. Could you summarize the differences between the CSS position values (static, relative, absolute, fixed)?
 
-    Answer: static:
-            relative:
-            absolute:
-            fixed: 
+    Answer: static: default, can't use top/left/bottom/right, flows naturally in page.
+            relative: still takes up original space but it is reltive to its normal position.
+            absolute: removes element from normal flow, positioned relative to nearest positioned ancestor.
+            fixed: removes element from flow, positioned relative to viewport, stays in place even when scrolled.
 
     b. How does absolute positioning depend on its parent element?
     
-    Answer:
+    Answer: Absolute elements are positioned relative to the nearest ancestor that has a position other than static. If there's no ancestor, it will use the <body> as an ancestor. 
 
     c. How do you differentiate sticky from fixed (you can research on sticky)?
 
-    Answer:
+    Answer: A sticky positioned element stays on the page within the normal flow and becomes fixed when it reached to a specific spot in its parent container, unlike the fixed position that is fixed in one spot (the viewport) and always be seen by the viewer.
 
     d. If you were designing a webpage for a school event, how might you use positioning to highlight important information? Please give concrete examples.
 
-    Answer:
+    Answer: I will use fixed to display references or navigation bar like the footer, use absolute to place event banners or buttons in specific spots, and use sticky for reminders.

@@ -1,163 +1,411 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
- <meta charset="UTF-8" />
- <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
- <title>Freedom Aguinaldo's Work</title>
- <link rel="icon" type="image/png" href="https://i.pinimg.com/736x/e2/3f/f2/e23ff23003a9013e63b994b27ecae302.jpg" />
-</head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+<title>Freedom Aguinaldo's Work</title>
+<link rel="icon" type="image/png" href="https://i.pinimg.com/736x/e2/3f/f2/e23ff23003a9013e63b994b27ecae302.jpg" />
 <style>
 body {
-    font-family: 'Tahoma';
-    background-image: url(https://i.pinimg.com/webp/1200x/c4/bf/f1/c4bff192c7b6e6b3572088029e14d932.webp);
-    background-size: cover;
-    background-position: center;
-    background-attachment: fixed;
-    background-repeat: no-repeat;
-    margin: 10px;
+   font-family: Tahoma;
+   background-image: url(https://i.pinimg.com/webp/1200x/c4/bf/f1/c4bff192c7b6e6b3572088029e14d932.webp);
+   background-size: cover;
+   background-position: center;
+   background-attachment: fixed;
+   background-repeat: no-repeat;
+   margin: 10px;
 }
 
 .profile {
-    padding: 10px;
-    width: 150px;
-    height: 150px;
-    top: 30px;
-    left: 30px;
+   padding: 10px;
+   width: 150px;
+   height: 150px;
 }
 
 .first-group {
-    width: 99%;
-    border: 1px, solid rgb(230, 185, 228);
-    padding: 10px;
-    background-color: rgb(246, 214, 244);
-    margin: 0 auto;
-    gap: 10px;
+   width: 99%;
+   border: 1px solid rgb(230, 185, 228);
+   padding: 10px;
+   background-color: rgb(246, 214, 244);
+   margin: 0 auto;
 }
 
-.resourceses {
-    width: 99%;
-    border: 1px, solid rgb(230, 185, 228);
-    padding: 10px;
-    background-color: rgb(246, 214, 244);
-    gap: 10px;
+.top-row {
+   display: flex;
+   align-items: flex-start;
+   justify-content: flex-start;
+   gap: 10px;
 }
 
-.para {
-    font-size: 10px;
+.search-box {
+   display: flex;
+   gap: 2px;
+   margin-top: 10px;
+}
+
+.search-box input {
+   padding: 7px;
+   border-radius: 6px;
+   border: 1px solid #ccc;
+   width: 1150px;
+}
+
+.search-box button {
+   padding: 7px 12px;
+   border: none;
+   background-color: #fff5f5;
+   border-radius: 6px;
+   cursor: pointer;
+}
+
+.search-box button:hover {
+   background-color: #ffecec;
+}
+
+.music-bar {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    padding: 5px 10px;
+    margin-top: 6px;
+    width: 1150px;
+    background-color: #fff5f5;
+    border-radius: 6px;
+    border: 1px solid #ccc;
+}
+
+.music-bar span {
+    font-size: 12px;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+.music-bar button {
+    padding: 4px 8px;
+    border: none;
+    background-color: #ffecec;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.music-bar button:hover {
+    background-color: #ffdede;
+}
+
+#youtubePlayer iframe {
+    display: none; 
 }
 
 .menu-bar {
-    display: flex;
-    justify-content: center;
-    gap: 20px;
-    align-items: center;
-    border-radius: 5px;
+   display: flex;
+   justify-content: center;
+   gap: 20px;
+   align-items: center;
+   margin-top: 10px;
 }
 
 .menu-bar a {
-  text-decoration: none;
-  color: black;
-  padding: 8px 15px;
-  background-color: #fff5f5;
-  border-radius: 5px;
-  transition: 0.2s;
+ text-decoration: none;
+ color: black;
+ padding: 8px 15px;
+ background-color: #fff5f5;
+ border-radius: 5px;
 }
 
 .menu-bar a:hover {
-  background-color: #fffafa;
+ background-color: #fffafa;
 }
 
 .dropdown {
-  position: relative;
-  display: inline-block;
-}
-
-.dropdown a.main {
-  background-color: #fff5f5;
-  color: black;
-  padding: 8px 12px;
-  text-decoration: none;
-  border-radius: 5px;
+ position: relative;
 }
 
 .dropdown-content {
-  display: none;
-  position: absolute;
-  background-color: #fff5f5;
-  min-width: 180px;
-  top: 100%;
-  left: 0;
-  border-radius: 5px;
-  flex-direction: column;
-  z-index: 1;
+ display: none;
+ position: absolute;
+ background-color: #fff5f5;
+ min-width: 180px;
+ border-radius: 5px;
+ z-index: 1;
 }
 
 .dropdown-content a {
-  display: block;
-  padding: 10px;
-  color: black;
-  text-decoration: none;
+ display: block;
+ padding: 10px;
+ color: black;
+ text-decoration: none;
 }
 
 .dropdown-content a:hover {
-  background-color: #fff1f1;
+ background-color: #fff1f1;
+}
+
+.dropdown:hover .dropdown-content {
+ display: block;
+}
+
+.works-headed-container {
+    display: flex;
+    gap: 20px;
+    align-items: flex-start;
+    margin-top: 10px;
+    flex-wrap: nowrap; 
 }
 
 .other-works {
-    width: 35%;
-    right: 10px;
-    height:67px;
-    border: 1px, solid rgb(230, 185, 228);
-    padding: 10px;
-    background-color: rgb(246, 214, 244);
+  flex: 1;
+  width: 380px;
+  height: 269px;
+  border: 1px solid rgb(230, 185, 228);
+  padding: 10px;
+  background-color: rgb(246, 214, 244);
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: column; 
+  gap: 10px;
+  overflow: hidden; 
+}
+
+.works-content {
+  display: flex;
+  flex-direction: column; 
+  align-items: flex-start;
+  gap: 8px;
+  overflow: auto; 
+}
+
+.text {
+   overflow-wrap: break-word; 
+}
+
+.logo img {
+   width: 100%; 
+   max-height: 80px; 
+   object-fit: contain;
+}
+
+.right-column {
+    flex: 2;  
+    min-width: 500px;
+    display: flex;
+    flex-direction: column;
     gap: 10px;
 }
+
+.contentet {
+   width: 100%;
+   height: 120px;
+   border: 1px solid rgb(230, 185, 228);
+   padding: 10px;
+   background-color: rgb(246, 214, 244);
+   box-sizing: border-box;
+}
+
+.fandoms-marquee {
+    overflow: hidden;
+    width: 100%;
+    margin-top: 10px;
+}
+
+.fandoms-track {
+    display: flex;
+    gap: 10px;
+    animation: scroll-left 25s linear infinite;
+}
+
+.fandoms-track img {
+    height: 60px;
+    flex-shrink: 0;
+    border-radius: 4px;
+}
+
+@keyframes scroll-left {
+    0% { transform: translateX(100%); }
+    100% { transform: translateX(-100%); }
+}
+
+.resourceses {
+   width: 99%;
+   position: fixed;
+   bottom: 10px;
+   border: 1px solid rgb(230, 185, 228);
+   padding: 10px;
+   background-color: rgb(246, 214, 244);
+   margin-top: 10px;
+}
+
+.para {
+   font-size: 10px;
+}
 </style>
+</head>
 <body>
-    <div class="first-group">
+
+<div class="first-group">
+    <div class="top-row">
         <img src="https://i.pinimg.com/1200x/97/8e/78/978e7830f575db73a3feba774f69392b.jpg" class="profile">
 
-        <div class="menu-bar">
-            <a href="./testonly.html">Home</a>
-    
-            <div class="dropdown">
-                <a href="#">2nd Qtr ▾</a>
-                <div class="dropdown-content">
-                    <a href="/graded/Q21NGCesiumAguinaldo.html">PE 1</a>
-                    <a href="pe2.html">PE 2</a>
-                    <a href="/graded/Graded1.html">Graded 1</a>
-                    <a href="/graded/whoops.html">Graded 2</a>
-                    <a href="/graded/Graded3.html">Graded 3</a>
+        <div>
+            <div class="search-box">
+                <input type="text" id="searchInput" placeholder="Search works... (ex: Graded 3 of 3rd Quarter)" onkeypress="handleEnter(event)">
+                <button onclick="searchPage()">Search</button>
             </div>
-        </div>
-    
-        <div class="dropdown">
-            <a href="#">3rd Qtr ▾</a>
-            <div class="dropdown-content">
-                <a href="/graded/Q3graded1.html">Graded 1</a>
-                <a href="/graded/Q3graded1.html">Graded 2</a>
-                <a href="/graded/register.html">Graded 3</a>
+
+            <div class="music-bar">
+                <span id="musicTitle">Playing: Sense by BAND-MAID</span>
+                <button id="playPauseBtn" onclick="toggleMusic()">▷</button>
+                <div id="youtubePlayer"></div>
             </div>
-        </div>
-    
-        <div class="dropdown">
-            <a href="#">4th Qtr ▾</a>
-            <div class="dropdown-content">
-                <a href="graded/4Graded1.html">Graded 1</a>
-                <a href="graded/4Graded1.html">Graded 2</a>
+
+            <div class="menu-bar">
+                <a href="./testonly.html">Home</a>
+                <div class="dropdown">
+                    <a href="#">2nd Qtr ▾</a>
+                    <div class="dropdown-content">
+                        <a href="/graded/Q21NGCesiumAguinaldo.html">PE 1</a>
+                        <a href="pe2.html">PE 2</a>
+                        <a href="/graded/Graded1.html">Graded 1</a>
+                        <a href="/graded/whoops.html">Graded 2</a>
+                        <a href="/graded/Graded3.html">Graded 3</a>
+                    </div>
+                </div>
+                <div class="dropdown">
+                    <a href="#">3rd Qtr ▾</a>
+                    <div class="dropdown-content">
+                        <a href="/graded/Q3graded1.html">Graded 1</a>
+                        <a href="/graded/Q3graded1.html">Graded 2</a>
+                        <a href="/graded/register.html">Graded 3</a>
+                    </div>
+                </div>
+                <div class="dropdown">
+                    <a href="#">4th Qtr ▾</a>
+                    <div class="dropdown-content">
+                        <a href="graded/4Graded1.html">Graded 1</a>
+                        <a href="graded/4Graded1.html">Graded 2</a>
+                        <a href="graded/9CsAguinaldoSeatwork2.md.html">Seatwork 2</a>
+                        <a href="graded/4Graded3.html">Graded 3</a>
+                    </div>
+                </div>
             </div>
         </div>
     </div>
-<br>
+</div>
+
+<div class="works-headed-container">
     <div class="other-works">
-        <h5>Other works!</h5>
-        <a href="link">Paper Hearts</a> <p>by Ababon, Avery and Aguinaldo</p>
+        <div class="works-content">
+            <div class="text">
+                <h5>Other works!</h5>
+                <a href="https://avery-ababon.github.io/WDProjCeisumAbabon-Aguinaldo/">Paper Hearts</a>
+                <p>by Ababon, Avery and Aguinaldo</p>
+                <p>
+                    Just a short Visual Novel game made by Avery and I as fans of Death Note and Bleach!
+                    The reason why the game exists is because the only thing common in both animes are the soul reapers.
+                </p>
+                <p>Scroll down to see the logo of our game!</p>
+            </div>
+            <div class="logo">
+                <img src="assets/logo.png" alt="logo">
+            </div>
+        </div>
     </div>
-<br>
-    <div class="resourceses">
-        <h4>Resources:</h4>
-        <p class="para">ANIME_LOVER. (n.d.). AKITO TAKAGI. Pinterest. https://ph.pinterest.com/pin/319544536075264297/</p>
-        <p class="para">marilyn, B. (n.d.). Pinterest. https://ph.pinterest.com/pin/3025924746671984/</p>
-        <p class="para"></p>
+    <div class="right-column">
+        <div class="headed">
+            <h3>Welcome to Freedom Louise Aguinaldo's Portfolio!</h3>
+        </div>
+        <div class="contentet">
+            <p>Hello! This is my portfolio from Quarter 2 to 4, containing most of the class activities in the school year 2025 to 2026. I made it to this format so it can act like a compiler of memories I made throughout my adventure in Grade 9. Even with the hardships I endured, I can finally enjoy it with this fruit, the website. I will add more designs in the remaining weeks of this school year. Bye bye!</p>
+        </div>
+
+        <div class="fandoms-marquee">
+            <div class="fandoms-track">
+                <img src="https://i.pinimg.com/1200x/f8/b4/42/f8b4422bb7aa7c3f30e187af4f944e44.jpg" alt="Bungo Stray Dogs">
+                <img src="https://i.pinimg.com/1200x/56/37/e3/5637e3bd34126cbb8fa39f09b8d55448.jpg" alt="Onmyoji">
+                <img src="https://i.pinimg.com/webp/1200x/c8/63/02/c8630287deb7b0079c1487c379c471d2.webp" alt="Mononoke (2007)">
+                <img src="https://i.pinimg.com/1200x/8b/2a/11/8b2a112d2eb867cf77a9b380ed2d3a6a.jpg" alt="Mononoke (Movie)">
+                <img src="https://i.pinimg.com/736x/70/20/25/7020256f74b5d2249d930a10bcc443aa.jpg" alt="Bleach">
+                <img src="https://i.pinimg.com/webp/1200x/d4/fd/d0/d4fdd0d77c9d485e05614cc3a0b03628.webp" alt="Death Note">
+                <img src="https://i.pinimg.com/originals/28/1a/de/281ade82d2f7abb49763346d33bf0c2d.gif" alt="Gintama">
+                <img src="https://i.pinimg.com/1200x/b4/57/43/b457437e4b3c3dd331347bf34220f359.jpg" alt="Platinum End">
+                <img src="https://i.pinimg.com/736x/b2/6c/33/b26c335de8b6b5511b46b0f8bdc9afdb.jpg" alt="Bakuman">
+                <img src="https://i.pinimg.com/originals/a4/9a/77/a49a77c1670330254175f43fd6bb9ce1.gif" alt="Soul Eater">
+                <img src="https://i.pinimg.com/1200x/d4/21/5c/d4215c730f9f109a3588d8f33b68cfaa.jpg" alt="Zankyou no Terror">
+                <img src="https://i.pinimg.com/736x/29/b9/d7/29b9d74703c77a690c57aa51854aa4bf.jpg" alt="Love Game in Eastern Fantasy">
+            </div>
+        </div>
     </div>
+</div>
+
+<div class="resourceses">
+    <h4>Resources:</h4>
+    <p class="para">ANIME_LOVER. (n.d.). AKITO TAKAGI. Pinterest. https://ph.pinterest.com/pin/319544536075264297/</p>
+    <p class="para">marilyn, B. (n.d.). Pinterest. https://ph.pinterest.com/pin/3025924746671984/</p>
+</div>
+
+<script>
+function handleEnter(event) {
+    if(event.key === "Enter") searchPage();
+}
+
+function searchPage() {
+    let input = document.getElementById("searchInput").value.toLowerCase();
+    if (input.includes("graded 3") && input.includes("3rd")) {
+        window.location.href = "/graded/register.html";
+    } else if (input.includes("graded 2") && input.includes("3rd")) {
+        window.location.href = "/graded/Q3graded1.html";
+    } else if (input.includes("graded 1") && input.includes("3rd")) {
+        window.location.href = "/graded/Q3graded1.html";
+    } else if (input.includes("graded 3") && input.includes("2nd")) {
+        window.location.href = "/graded/Graded3.html";
+    } else if (input.includes("graded 2") && input.includes("2nd")) {
+        window.location.href = "/graded/whoops.html";
+    } else if (input.includes("graded 1") && input.includes("2nd")) {
+        window.location.href = "/graded/Graded1.html";
+    } else if (input.includes("pe 1")) {
+        window.location.href = "/graded/Q21NGCesiumAguinaldo.html";
+    } else if (input.includes("pe 2")) {
+        window.location.href = "pe2.html";
+    } else if (input.includes("graded 3") && input.includes("4th")) {
+        window.location.href = "/graded/4Graded3.html";
+    } else if (input.includes("graded 2") && input.includes("4th")) {
+        window.location.href = "/graded/4Graded1.html";
+    } else if (input.includes("graded 1") && input.includes("4th")) {
+        window.location.href = "/graded/4Graded1.html";
+    } else {
+        alert("No results found");
+    }
+}
+
+let youtubePlayer;
+let isPlaying = false;
+let tag = document.createElement('script');
+tag.src = "https://www.youtube.com/iframe_api";
+let firstScriptTag = document.getElementsByTagName('script')[0];
+firstScriptTag.parentNode.insertBefore(tag, firstScriptTag);
+
+function onYouTubeIframeAPIReady() {
+    youtubePlayer = new YT.Player('youtubePlayer', {
+        height: '0',  
+        width: '0',
+        videoId: 'BWN6iOFjm9U',
+        playerVars: { autoplay: 0, controls: 0, loop: 1, modestbranding: 1 }
+    });
+}
+
+function toggleMusic() {
+    if (!youtubePlayer) return;
+    if (isPlaying) {
+        youtubePlayer.pauseVideo();
+        document.getElementById("playPauseBtn").innerText = "▷";
+        isPlaying = false;
+    } else {
+        youtubePlayer.playVideo();
+        document.getElementById("playPauseBtn").innerText = "⏸";
+        isPlaying = true;
+    }
+}
+</script>
+
 </body>
+</html>
