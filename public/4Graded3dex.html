@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width">
+  <meta name="author" content="Freedom Louise Aguinaldo">
+  <meta name="description" content="Nlogonia debugging exercise">
+  <meta name="keywords" content="Nlogonia, debugging, HTML, CSS, JavaScript">
+  <title>Nlogonia Debugging Exercise</title>
+
+  <link href="style.css" rel="stylesheet" type="text/css" />
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300&display=swap" rel="stylesheet">
+
+  <link rel="icon" type="image/x-icon" href="images/favicon.ico">
+</head>
+
+<body>
+  <header>
+    <nav>
+      <a href="#start">Table</a>
+      <a href="#input">Input</a>
+      <a href="#output">Output</a>
+      <a href="errorlogs.html">Error Logs</a>
+    </nav>
+
+    <h1>Freedom Louise M. Aguinaldo / Cesium - Mar 31, 2026</h1>
+    <h2 id="start">Nlogonia</h2>
+
+    <p class="intro">
+      This page checks the location of a residence based on the division point.
+      It also plots the point on the coordinate plane.
+    </p>
+  </header>
+
+  <section id="table">
+    <table>
+      <tr class="rColor">
+        <th>input</th>
+        <th>output</th>
+      </tr>
+
+      <tr class="rColor">
+        <td colspan="2">Sample Data</td>
+      </tr>
+
+      <tr>
+        <td>2 1 10 10</td>
+        <td>NE</td>
+      </tr>
+      <tr>
+        <td>2 1 -10 1</td>
+        <td>divisa</td>
+      </tr>
+      <tr>
+        <td>2 1 0 33</td>
+        <td>NO</td>
+      </tr>
+
+      <tr class="rColor">
+        <td colspan="2">For Current Input</td>
+      </tr>
+
+      <tr>
+        <td id="in1">0 0 0 0</td>
+        <td id="out1">divisa</td>
+      </tr>
+    </table>
+    <hr>
+  </section>
+
+  <section id="input">
+    <h2>Input</h2>
+
+    <p>
+      Enter the division point first, then the house coordinates.
+      The program will show the correct region and plot the point.
+    </p>
+
+    <h4>Division Point</h4>
+    <p>
+      <label>x0: <input type="number" id="x0" placeholder="x0"></label>
+      <label>y0: <input type="number" id="y0" placeholder="y0"></label>
+    </p>
+
+    <h4>Residence Coordinates</h4>
+    <p>
+      <label>x: <input type="number" id="x" placeholder="x"></label>
+      <label>y: <input type="number" id="y" placeholder="y"></label>
+    </p>
+
+    <button onclick="plotPoint(
+      Number(x0.value || 0),
+      Number(y0.value || 0),
+      Number(x.value || 0),
+      Number(y.value || 0)
+    )">
+      Plot
+    </button>
+  </section>
+
+  <section id="output">
+    <h2>Output</h2>
+
+    <p><strong>Center = Division Point (x0, y0)</strong></p>
+
+    <div id="coordinatePlane">
+      <div id="xAxis" class="axis"></div>
+      <div id="yAxis" class="axis"></div>
+    </div>
+
+    <p class="smallNote">
+      The center lines represent the division point. If the residence is on either line, the answer is divisa.
+    </p>
+
+    <hr>
+  </section>
+
+  <footer>
+    <a href="https://facebook.com"><div class="icon facebook"></div></a>
+    <a href="https://twitter.com"><div class="icon twitter"></div></a>
+    <a href="https://github.com"><div class="icon github"></div></a>
+  </footer>
+
+  <script defer src="script.js"></script>
+</body>
+</html>
